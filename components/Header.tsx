@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-2">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-12 lg:px-24">
+      <div className="flex items-center justify-between px-4 sm:px-8 lg:px-16">
         {/* Logo */}
         <div className="flex items-center">
           <img
