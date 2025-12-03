@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, HardHat } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,16 +28,12 @@ export const Header: React.FC = () => {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-12 lg:px-24">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <HardHat size={32} className={`${isScrolled ? 'text-brand-blue' : 'text-white'}`} />
-          <div className="leading-none">
-            <h1 className={`text-2xl font-bold uppercase tracking-tighter ${isScrolled ? 'text-brand-darkBlue' : 'text-white'}`}>
-              M E Stewart
-            </h1>
-            <p className={`text-[10px] font-bold uppercase tracking-widest ${isScrolled ? 'text-gray-500' : 'text-gray-300'}`}>
-              Contractors
-            </p>
-          </div>
+        <div className="flex items-center">
+          <img
+            src="/assets/ChatGPT Image Dec 3, 2025, 05_04_31 PM.png"
+            alt="M E Stewart Contractors"
+            className="h-12 w-auto object-contain"
+          />
         </div>
 
         {/* Desktop Nav */}
