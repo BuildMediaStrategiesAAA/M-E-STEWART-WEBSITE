@@ -54,11 +54,11 @@ export const Header: React.FC = () => {
         }
 
         .logo-img {
+          image-rendering: high-quality;
           image-rendering: -webkit-optimize-contrast;
-          image-rendering: crisp-edges;
           backface-visibility: hidden;
           transform: translateZ(0);
-          -webkit-font-smoothing: antialiased;
+          -webkit-font-smoothing: subpixel-antialiased;
         }
       `}</style>
       <header
