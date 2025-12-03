@@ -1,17 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { name: 'Home', href: '#' },
@@ -21,20 +12,14 @@ export const Header: React.FC = () => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-6'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-2">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-12 lg:px-24">
         {/* Logo */}
         <div className="flex items-center">
           <img
             src="/assets/ChatGPT Image Dec 3, 2025, 06_34_36 PM.png"
             alt="M E Stewart Contractors"
-            className={`w-auto object-contain transition-all duration-300 ${
-              isScrolled ? 'h-32' : 'h-36'
-            }`}
+            className="w-auto h-32 object-contain"
           />
         </div>
 
@@ -44,34 +29,28 @@ export const Header: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-bold uppercase tracking-wide transition-colors hover:text-brand-blue ${
-                isScrolled ? 'text-brand-slate' : 'text-white'
-              }`}
+              className="text-sm font-bold uppercase tracking-wide transition-colors text-brand-slate hover:text-brand-blue"
             >
               {link.name}
             </a>
           ))}
           <a
             href="#contact"
-            className={`rounded-full px-6 py-2 text-sm font-bold uppercase transition-colors ${
-              isScrolled 
-                ? 'bg-brand-blue text-white hover:bg-brand-darkBlue' 
-                : 'bg-white text-brand-darkBlue hover:bg-gray-100'
-            }`}
+            className="rounded-full px-6 py-2 text-sm font-bold uppercase transition-colors bg-brand-blue text-white hover:bg-brand-darkBlue"
           >
             Get Quote
           </a>
         </nav>
 
         {/* Mobile Toggle */}
-        <button 
-          className="md:hidden" 
+        <button
+          className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <X className={isScrolled ? 'text-brand-darkBlue' : 'text-white'} />
+            <X className="text-brand-darkBlue" />
           ) : (
-            <Menu className={isScrolled ? 'text-brand-darkBlue' : 'text-white'} />
+            <Menu className="text-brand-darkBlue" />
           )}
         </button>
       </div>
