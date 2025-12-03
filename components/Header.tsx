@@ -12,12 +12,53 @@ export const Header: React.FC = () => {
   ];
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-1"
-      style={{
-        boxShadow: '0 4px 20px rgba(0, 149, 255, 0.6), 0 2px 8px rgba(0, 149, 255, 0.8)'
-      }}
-    >
+    <>
+      <style>{`
+        @keyframes shimmer {
+          0% {
+            transform: scaleX(0);
+            opacity: 0.5;
+          }
+          50% {
+            opacity: 1;
+            box-shadow: 0 0 10px rgba(0, 149, 255, 0.8);
+          }
+          100% {
+            transform: scaleX(1);
+            opacity: 0.8;
+          }
+        }
+
+        .nav-link {
+          position: relative;
+          display: inline-block;
+        }
+
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, #0095ff, #00d4ff, #0095ff);
+          background-size: 200% 100%;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+          transform: scaleX(1);
+          animation: shimmer 1.5s ease-in-out infinite;
+        }
+      `}</style>
+      <header
+        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-1"
+        style={{
+          boxShadow: '0 4px 20px rgba(0, 149, 255, 0.6), 0 2px 8px rgba(0, 149, 255, 0.8)'
+        }}
+      >
       <div className="flex items-center justify-between px-4 sm:px-8 lg:px-16">
         {/* Logo */}
         <div className="flex items-center">
@@ -34,7 +75,7 @@ export const Header: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-bold uppercase tracking-wide transition-colors text-brand-slate hover:text-brand-blue"
+              className="nav-link text-sm font-bold uppercase tracking-wide transition-colors text-brand-slate hover:text-brand-blue"
             >
               {link.name}
             </a>
@@ -68,7 +109,7 @@ export const Header: React.FC = () => {
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-lg font-bold uppercase text-brand-darkBlue hover:text-brand-blue"
+              className="nav-link text-lg font-bold uppercase text-brand-darkBlue hover:text-brand-blue"
             >
               {link.name}
             </a>
@@ -83,5 +124,6 @@ export const Header: React.FC = () => {
         </div>
       )}
     </header>
+    </>
   );
 };
