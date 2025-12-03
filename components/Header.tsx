@@ -71,7 +71,7 @@ export const Header: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="/assets/ChatGPT Image Dec 3, 2025, 06_34_36 PM.png"
+            src="/assets/ChatGPT Image Dec 3, 2025, 07_52_14 PM.png"
             alt="M E Stewart Contractors"
             className="logo-img w-auto h-16 sm:h-20 md:h-28 lg:h-32 object-contain"
           />
