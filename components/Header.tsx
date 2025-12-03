@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-5' : 'bg-transparent py-8'
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-6'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-12 lg:px-24">
@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
             src="/assets/ChatGPT Image Dec 3, 2025, 06_34_36 PM.png"
             alt="M E Stewart Contractors"
             className={`w-auto object-contain transition-all duration-300 ${
-              isScrolled ? 'h-24' : 'h-28'
+              isScrolled ? 'h-32' : 'h-36'
             }`}
           />
         </div>
