@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
         }
       `}</style>
       <header
-        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-0.5 md:py-1"
+        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md"
         style={{
           boxShadow: '0 4px 20px rgba(0, 149, 255, 0.6), 0 2px 8px rgba(0, 149, 255, 0.8)'
         }}
@@ -76,7 +76,7 @@ export const Header: React.FC = () => {
           <img
             src="/assets/logo.png"
             alt="M E Stewart Contractors"
-            className="logo-img w-auto h-16 sm:h-20 md:h-28 lg:h-32 object-contain"
+            className="logo-img w-auto h-20 sm:h-24 md:h-36 lg:h-40 object-contain"
           />
         </Link>
 
