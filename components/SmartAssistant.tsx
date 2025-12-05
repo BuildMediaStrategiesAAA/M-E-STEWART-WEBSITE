@@ -59,7 +59,7 @@ export const SmartAssistant: React.FC = () => {
                 <button
                   type="submit"
                   disabled={loading || !query.trim()}
-                  className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-brand-blue py-3 font-bold uppercase text-white transition-colors hover:bg-brand-darkBlue disabled:opacity-50 shadow-md"
+                  className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-brand-blue py-3 font-bold uppercase text-white transition-colors lg:hover:bg-brand-darkBlue disabled:opacity-50 shadow-md"
                 >
                   {loading ? <Loader2 className="animate-spin" /> : <Send size={20} />}
                   {loading ? "Analyzing Project..." : "Get Insight"}
@@ -74,7 +74,7 @@ export const SmartAssistant: React.FC = () => {
                   </h4>
                   <button 
                     onClick={() => { setResponse(null); setQuery(''); }}
-                    className="text-sm font-bold text-gray-400 hover:text-brand-blue uppercase"
+                    className="text-sm font-bold text-gray-400 lg:hover:text-brand-blue uppercase"
                   >
                     Start Over
                   </button>
@@ -88,7 +88,7 @@ export const SmartAssistant: React.FC = () => {
                  <p className="text-sm text-gray-500 italic mb-3">
                    *This is an AI-generated estimate. For accurate pricing and timelines, please contact us directly.
                  </p>
-                 <a href="#contact" className="block w-full text-center rounded-full border-2 border-brand-blue py-2 font-bold uppercase text-brand-blue hover:bg-brand-blue hover:text-white transition-colors">
+                 <a href="#contact" className="block w-full text-center rounded-full border-2 border-brand-blue py-2 font-bold uppercase text-brand-blue lg:hover:bg-brand-blue lg:hover:text-white transition-colors">
                    Book Official Site Visit
                  </a>
                </div>

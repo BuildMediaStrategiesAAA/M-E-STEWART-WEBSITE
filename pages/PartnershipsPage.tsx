@@ -51,12 +51,12 @@ export const PartnershipsPage: React.FC = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative border-2 border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-brand-blue rounded-lg"
+                className="group relative border-2 border-gray-200 bg-white p-8 transition-all duration-300 lg:hover:-translate-y-3 lg:hover:shadow-2xl lg:hover:border-brand-blue rounded-lg"
                 style={{
                   animation: `fade-in-up 0.6s ease-out ${index * 0.1}s both`
                 }}
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-grey text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-grey text-brand-blue lg:group-hover:bg-brand-blue lg:group-hover:text-white transition-all duration-300 lg:group-hover:scale-110">
                   <service.icon size={32} />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold uppercase text-brand-darkBlue">
@@ -93,7 +93,7 @@ export const PartnershipsPage: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-block rounded-full px-10 py-4 text-lg font-bold uppercase transition-all bg-white text-brand-darkBlue hover:bg-brand-darkBlue hover:text-white shadow-lg hover:shadow-2xl"
+            className="inline-block rounded-full px-10 py-4 text-lg font-bold uppercase transition-all bg-white text-brand-darkBlue lg:hover:bg-brand-darkBlue lg:hover:text-white shadow-lg lg:hover:shadow-2xl"
           >
             Get In Touch
           </Link>

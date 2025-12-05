@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Award, Users, Target, TrendingUp, Shield, Heart, Lightbulb, CheckCircle } from 'lucide-react';
 
 const values = [
@@ -43,6 +43,71 @@ const whyChoose = [
 ];
 
 export const AboutPage: React.FC = () => {
+  const [visibleValues, setVisibleValues] = useState<Set<number>>(new Set());
+  const [visibleAccreditations, setVisibleAccreditations] = useState<Set<number>>(new Set());
+  const [ctaVisible, setCtaVisible] = useState(false);
+  const valueRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const accreditationRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const ctaRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    valueRefs.current.forEach((card, idx) => {
+      if (!card) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleValues((prev) => new Set(prev).add(idx));
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(card);
+      observers.push(observer);
+    });
+
+    accreditationRefs.current.forEach((card, idx) => {
+      if (!card) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleAccreditations((prev) => new Set(prev).add(idx));
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(card);
+      observers.push(observer);
+    });
+
+    if (ctaRef.current) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setCtaVisible(true);
+          }
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(ctaRef.current);
+      observers.push(observer);
+    }
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-50 pt-32 md:pt-36">
       <div className="bg-gradient-to-br from-brand-darkBlue to-brand-blue text-white py-20 px-6 sm:px-12 lg:px-24">
@@ -108,7 +173,10 @@ export const AboutPage: React.FC = () => {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                ref={(el) => (valueRefs.current[index] = el)}
+                className={`mobile-value-card bg-white p-8 rounded-2xl shadow-lg lg:hover:shadow-2xl transition-all duration-300 lg:hover:-translate-y-2 ${
+                  visibleValues.has(index) ? 'mobile-value-active' : ''
+                }`}
                 style={{
                   animation: `fade-in-up 0.6s ease-out ${index * 0.1}s both`
                 }}
@@ -200,7 +268,10 @@ export const AboutPage: React.FC = () => {
             {['Federation of Master Builders', 'NHBC Registered', 'Construction Line Gold', 'Safe Contractor'].map((accreditation, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center text-center"
+                ref={(el) => (accreditationRefs.current[index] = el)}
+                className={`mobile-accreditation-card bg-white p-8 rounded-xl shadow-md lg:hover:shadow-xl transition-shadow duration-300 flex items-center justify-center text-center ${
+                  visibleAccreditations.has(index) ? 'mobile-accreditation-active' : ''
+                }`}
               >
                 <div>
                   <Award size={48} className="text-brand-blue mx-auto mb-4" />
@@ -224,7 +295,10 @@ export const AboutPage: React.FC = () => {
           </p>
           <a
             href="/contact"
-            className="inline-block rounded-full px-10 py-4 text-lg font-bold uppercase transition-all bg-white text-brand-darkBlue hover:bg-brand-darkBlue hover:text-white shadow-lg hover:shadow-2xl"
+            ref={ctaRef}
+            className={`mobile-cta inline-block rounded-full px-10 py-4 text-lg font-bold uppercase transition-all bg-white text-brand-darkBlue lg:hover:bg-brand-darkBlue lg:hover:text-white shadow-lg lg:hover:shadow-2xl ${
+              ctaVisible ? 'mobile-cta-active' : ''
+            }`}
           >
             Get In Touch
           </a>
@@ -254,6 +328,21 @@ export const AboutPage: React.FC = () => {
 
         .animate-fade-in {
           animation: fade-in 0.8s ease-out;
+        }
+
+        @media (max-width: 1023px) {
+          .mobile-value-card.mobile-value-active {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: translateY(-8px);
+          }
+          .mobile-accreditation-card.mobile-accreditation-active {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          }
+          .mobile-cta.mobile-cta-active {
+            background-color: #1e3a5f;
+            color: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          }
         }
       `}</style>
     </div>

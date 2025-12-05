@@ -143,7 +143,7 @@ export const ContactPage: React.FC = () => {
                   <button
                     type="submit"
                     disabled={submitted}
-                    className="w-full md:w-auto px-10 py-4 bg-brand-blue text-white font-bold uppercase rounded-full hover:bg-brand-darkBlue transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full md:w-auto px-10 py-4 bg-brand-blue text-white font-bold uppercase rounded-full lg:hover:bg-brand-darkBlue transition-all duration-300 shadow-lg lg:hover:shadow-2xl flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {submitted ? (
                       <>Message Sent!</>
@@ -168,11 +168,11 @@ export const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <p className="font-bold uppercase text-sm mb-1">Phone</p>
-                      <a href="tel:01304123456" className="hover:text-brand-blue transition-colors">
+                      <a href="tel:01304123456" className="lg:hover:text-brand-blue transition-colors">
                         01304 123 456
                       </a>
                       <br />
-                      <a href="tel:07123456789" className="hover:text-brand-blue transition-colors">
+                      <a href="tel:07123456789" className="lg:hover:text-brand-blue transition-colors">
                         07123 456 789
                       </a>
                     </div>
@@ -184,7 +184,7 @@ export const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <p className="font-bold uppercase text-sm mb-1">Email</p>
-                      <a href="mailto:info@mestewart.co.uk" className="hover:text-brand-blue transition-colors break-all">
+                      <a href="mailto:info@mestewart.co.uk" className="lg:hover:text-brand-blue transition-colors break-all">
                         info@mestewart.co.uk
                       </a>
                     </div>

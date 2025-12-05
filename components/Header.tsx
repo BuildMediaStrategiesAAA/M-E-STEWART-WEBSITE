@@ -51,9 +51,11 @@ export const Header: React.FC = () => {
           transition: transform 0.3s ease;
         }
 
-        .nav-link:hover::after {
-          transform: scaleX(1);
-          animation: shimmer 1.5s ease-in-out infinite;
+        @media (min-width: 1024px) {
+          .nav-link:hover::after {
+            transform: scaleX(1);
+            animation: shimmer 1.5s ease-in-out infinite;
+          }
         }
 
         .logo-img {

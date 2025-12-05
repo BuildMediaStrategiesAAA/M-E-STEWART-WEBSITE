@@ -98,7 +98,7 @@ export const Contact: React.FC = () => {
                 <textarea rows={4} className="w-full rounded-lg border-2 border-transparent bg-white px-4 py-3 focus:border-brand-blue focus:outline-none transition-colors resize-none shadow-sm"></textarea>
               </div>
 
-              <button type="button" className="w-full bg-brand-blue text-white font-bold uppercase py-4 rounded-full hover:bg-brand-darkBlue transition-colors tracking-widest shadow-lg">
+              <button type="button" className="w-full bg-brand-blue text-white font-bold uppercase py-4 rounded-full lg:hover:bg-brand-darkBlue transition-colors tracking-widest shadow-lg">
                 Submit Inquiry
               </button>
             </form>

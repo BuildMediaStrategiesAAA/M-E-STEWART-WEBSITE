@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Hammer, Home, Ruler, HardHat, Building, PaintBucket } from 'lucide-react';
 
 const services = [
@@ -35,8 +35,50 @@ const services = [
 ];
 
 export const Services: React.FC = () => {
+  const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    cardRefs.current.forEach((card, idx) => {
+      if (!card) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleCards((prev) => new Set(prev).add(idx));
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(card);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
   return (
     <section id="services" className="bg-white py-20 px-6 sm:px-12 lg:px-24">
+      <style>{`
+        @media (max-width: 1023px) {
+          .mobile-card-active {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #0095ff;
+          }
+          .mobile-card-active .mobile-icon-bg {
+            background-color: #0095ff;
+            color: white;
+          }
+        }
+      `}</style>
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold uppercase text-brand-darkBlue sm:text-5xl">
@@ -50,11 +92,14 @@ export const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="group relative border border-gray-200 bg-white p-8 transition-all hover:-translate-y-2 hover:shadow-xl hover:border-brand-blue"
+            <div
+              key={index}
+              ref={(el) => (cardRefs.current[index] = el)}
+              className={`group relative border border-gray-200 bg-white p-8 transition-all lg:hover:-translate-y-2 lg:hover:shadow-xl lg:hover:border-brand-blue ${
+                visibleCards.has(index) ? 'mobile-card-active' : ''
+              }`}
             >
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-brand-grey text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-colors">
+              <div className="mobile-icon-bg mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-brand-grey text-brand-blue lg:group-hover:bg-brand-blue lg:group-hover:text-white transition-colors">
                 <service.icon size={28} />
               </div>
               <h3 className="mb-3 text-2xl font-bold uppercase text-brand-darkBlue">

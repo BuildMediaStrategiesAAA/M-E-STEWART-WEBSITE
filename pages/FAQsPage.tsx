@@ -121,11 +121,11 @@ export const FAQsPage: React.FC = () => {
                   return (
                     <div
                       key={questionIndex}
-                      className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg"
+                      className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 lg:hover:shadow-lg"
                     >
                       <button
                         onClick={() => toggleFAQ(categoryIndex, questionIndex)}
-                        className="w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-slate-50"
+                        className="w-full flex items-center justify-between p-6 text-left transition-colors lg:hover:bg-slate-50"
                       >
                         <h3 className="text-lg font-bold text-brand-darkBlue pr-4">
                           {faq.question}
@@ -160,7 +160,7 @@ export const FAQsPage: React.FC = () => {
           </p>
           <a
             href="/contact"
-            className="inline-block text-white bg-brand-blue hover:bg-brand-darkBlue px-8 py-3 rounded-full font-bold uppercase tracking-wide transition-colors shadow-md"
+            className="inline-block text-white bg-brand-blue lg:hover:bg-brand-darkBlue px-8 py-3 rounded-full font-bold uppercase tracking-wide transition-colors shadow-md"
           >
             Contact Us
           </a>

@@ -130,7 +130,7 @@ export const TestimonialsPage: React.FC = () => {
             </h2>
             <div className="mx-auto h-1 w-24 bg-brand-blue mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              See more before and after examples in our <a href="/projects" className="text-brand-blue font-bold hover:underline">Projects page</a>
+              See more before and after examples in our <a href="/projects" className="text-brand-blue font-bold lg:hover:underline">Projects page</a>
             </p>
           </div>
 
@@ -138,7 +138,7 @@ export const TestimonialsPage: React.FC = () => {
             {beforeAfterProjects.map((project, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg lg:hover:shadow-2xl transition-all duration-300 lg:hover:-translate-y-2"
                 style={{
                   animation: `fade-in-up 0.5s ease-out ${idx * 0.1}s both`
                 }}
@@ -189,7 +189,7 @@ export const TestimonialsPage: React.FC = () => {
           </p>
           <a
             href="/contact"
-            className="inline-block rounded-full px-10 py-4 text-lg font-bold uppercase transition-all bg-white text-brand-darkBlue hover:bg-brand-darkBlue hover:text-white shadow-lg hover:shadow-2xl"
+            className="inline-block rounded-full px-10 py-4 text-lg font-bold uppercase transition-all bg-white text-brand-darkBlue lg:hover:bg-brand-darkBlue lg:hover:text-white shadow-lg lg:hover:shadow-2xl"
           >
             Get In Touch
           </a>

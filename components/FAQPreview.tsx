@@ -32,7 +32,7 @@ export const FAQPreview: React.FC = () => {
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="bg-white rounded-lg p-6 shadow-md lg:hover:shadow-lg transition-shadow duration-300"
             >
               <h3 className="text-lg font-bold text-brand-darkBlue mb-2">
                 {faq.question}
@@ -47,7 +47,7 @@ export const FAQPreview: React.FC = () => {
         <div className="text-center">
           <Link
             to="/faqs"
-            className="inline-flex items-center text-white bg-brand-blue hover:bg-brand-darkBlue px-8 py-3 rounded-full font-bold uppercase tracking-wide transition-colors shadow-md"
+            className="inline-flex items-center text-white bg-brand-blue lg:hover:bg-brand-darkBlue px-8 py-3 rounded-full font-bold uppercase tracking-wide transition-colors shadow-md"
           >
             View All FAQs
             <ChevronRight size={20} className="ml-2" />

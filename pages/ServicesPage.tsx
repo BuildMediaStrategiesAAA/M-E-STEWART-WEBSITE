@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Hammer, Home, Ruler, HardHat, Building, PaintBucket, CheckCircle, Clock, Award, Shield } from 'lucide-react';
 
 const services = [
@@ -64,6 +64,71 @@ const whyChooseUs = [
 ];
 
 export const ServicesPage: React.FC = () => {
+  const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
+  const [visibleWhyCards, setVisibleWhyCards] = useState<Set<number>>(new Set());
+  const [ctaVisible, setCtaVisible] = useState(false);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const whyCardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const ctaRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    cardRefs.current.forEach((card, idx) => {
+      if (!card) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleCards((prev) => new Set(prev).add(idx));
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(card);
+      observers.push(observer);
+    });
+
+    whyCardRefs.current.forEach((card, idx) => {
+      if (!card) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleWhyCards((prev) => new Set(prev).add(idx));
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(card);
+      observers.push(observer);
+    });
+
+    if (ctaRef.current) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setCtaVisible(true);
+          }
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(ctaRef.current);
+      observers.push(observer);
+    }
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-50 pt-32 md:pt-36">
       <div className="bg-gradient-to-br from-brand-darkBlue to-brand-blue text-white py-20 px-6 sm:px-12 lg:px-24">
@@ -84,12 +149,15 @@ export const ServicesPage: React.FC = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative border-2 border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-brand-blue rounded-lg"
+                ref={(el) => (cardRefs.current[index] = el)}
+                className={`mobile-service-card group relative border-2 border-gray-200 bg-white p-8 transition-all duration-300 lg:hover:-translate-y-3 lg:hover:shadow-2xl lg:hover:border-brand-blue rounded-lg ${
+                  visibleCards.has(index) ? 'mobile-card-active' : ''
+                }`}
                 style={{
                   animation: `fade-in-up 0.6s ease-out ${index * 0.1}s both`
                 }}
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-grey text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                <div className="mobile-service-icon mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-grey text-brand-blue lg:group-hover:bg-brand-blue lg:group-hover:text-white transition-all duration-300 lg:group-hover:scale-110">
                   <service.icon size={32} />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold uppercase text-brand-darkBlue">
@@ -125,7 +193,10 @@ export const ServicesPage: React.FC = () => {
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="text-center p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                ref={(el) => (whyCardRefs.current[index] = el)}
+                className={`mobile-why-card text-center p-8 bg-white rounded-lg shadow-md lg:hover:shadow-xl transition-shadow duration-300 ${
+                  visibleWhyCards.has(index) ? 'mobile-why-active' : ''
+                }`}
               >
                 <div className="mb-4 flex justify-center">
                   <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-blue text-white">
@@ -154,7 +225,10 @@ export const ServicesPage: React.FC = () => {
           </p>
           <a
             href="/contact"
-            className="inline-block rounded-full px-10 py-4 text-lg font-bold uppercase transition-all bg-brand-blue text-white hover:bg-white hover:text-brand-darkBlue shadow-lg hover:shadow-2xl"
+            ref={ctaRef}
+            className={`mobile-cta inline-block rounded-full px-10 py-4 text-lg font-bold uppercase transition-all bg-brand-blue text-white lg:hover:bg-white lg:hover:text-brand-darkBlue shadow-lg lg:hover:shadow-2xl ${
+              ctaVisible ? 'mobile-cta-active' : ''
+            }`}
           >
             Get A Free Quote
           </a>
@@ -184,6 +258,27 @@ export const ServicesPage: React.FC = () => {
 
         .animate-fade-in {
           animation: fade-in 0.8s ease-out;
+        }
+
+        @media (max-width: 1023px) {
+          .mobile-service-card.mobile-card-active {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-color: #0095ff;
+          }
+          .mobile-card-active .mobile-service-icon {
+            background-color: #0095ff;
+            color: white;
+            transform: scale(1.1);
+          }
+          .mobile-why-card.mobile-why-active {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          }
+          .mobile-cta.mobile-cta-active {
+            background-color: white;
+            color: #1e3a5f;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          }
         }
       `}</style>
     </div>
