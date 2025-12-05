@@ -68,7 +68,7 @@ export const Header: React.FC = () => {
         className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md"
         style={{
           boxShadow: '0 4px 20px rgba(0, 149, 255, 0.6), 0 2px 8px rgba(0, 149, 255, 0.8)',
-          height: '80px'
+          height: '95px'
         }}
       >
       <div className="flex items-center justify-between px-3 sm:px-4 md:px-8 lg:px-16 h-full">
