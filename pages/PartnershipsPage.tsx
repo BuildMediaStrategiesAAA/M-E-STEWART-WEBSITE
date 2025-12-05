@@ -30,13 +30,13 @@ const services = [
   }
 ];
 
-export const LandlordServicesPage: React.FC = () => {
+export const PartnershipsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 pt-32 md:pt-36">
       <div className="bg-gradient-to-br from-brand-darkBlue to-brand-blue text-white py-20 px-6 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold uppercase mb-6 animate-fade-in">
-            Landlord and Estate Agent Services
+            Partnership Services
           </h1>
           <div className="mx-auto h-1 w-32 bg-white mb-6"></div>
           <p className="text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
