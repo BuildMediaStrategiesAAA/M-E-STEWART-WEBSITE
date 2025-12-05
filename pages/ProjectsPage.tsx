@@ -159,7 +159,7 @@ export const ProjectsPage: React.FC = () => {
                     {project.description}
                   </p>
 
-                  <div className="space-y-2 text-sm text-gray-500">
+                  <div className="space-y-2 text-sm text-gray-500 mb-6">
                     <div className="flex items-center">
                       <MapPin size={16} className="text-brand-blue mr-2" />
                       <span>{project.location}</span>
@@ -173,6 +173,13 @@ export const ProjectsPage: React.FC = () => {
                       <span>{project.size}</span>
                     </div>
                   </div>
+
+                  <a
+                    href="/testimonials"
+                    className="inline-block w-full text-center bg-brand-blue text-white px-6 py-3 rounded-full font-bold uppercase text-sm transition-all duration-300 hover:bg-brand-darkBlue hover:shadow-lg"
+                  >
+                    View Testimonials
+                  </a>
                 </div>
               </div>
             ))}
