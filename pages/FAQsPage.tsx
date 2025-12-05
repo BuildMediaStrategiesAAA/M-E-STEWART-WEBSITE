@@ -94,7 +94,7 @@ export const FAQsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <div className="bg-gradient-to-br from-brand-darkBlue to-brand-blue text-white py-20 px-6 sm:px-12 lg:px-24">
+      <div className="bg-gradient-to-br from-brand-darkBlue to-brand-blue text-white pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-20 px-6 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-5xl">
           <h1 className="text-5xl font-bold uppercase mb-4 sm:text-6xl">
             Frequently Asked Questions
