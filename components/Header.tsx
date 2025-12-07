@@ -83,7 +83,7 @@ export const Header: React.FC = () => {
           <img
             src="/assets/chatgpt_image_dec_7,_2025,_07_24_14_pm.png"
             alt="M E Stewart Contractors"
-            className="logo-img w-auto h-28 sm:h-32 md:h-48 lg:h-56 object-contain"
+            className="logo-img w-auto h-16 sm:h-20 md:h-24 lg:h-24 object-contain"
           />
         </Link>
 
