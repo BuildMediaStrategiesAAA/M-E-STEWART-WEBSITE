@@ -118,7 +118,7 @@ export const ProjectsPage: React.FC = () => {
                     src={project.img}
                     alt={project.title}
                     className={`enhanced-image w-full object-cover rounded-lg shadow-lg ${
-                      project.isBeforeAfter ? 'h-[700px] sm:h-[850px] md:h-[1000px] lg:h-[1100px]' : 'h-auto'
+                      project.isBeforeAfter ? 'h-[700px] sm:h-[850px] md:h-[1100px] lg:h-[1100px]' : 'h-auto'
                     }`}
                   />
                 </div>
