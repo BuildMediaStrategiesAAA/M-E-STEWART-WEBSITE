@@ -14,8 +14,7 @@ const projects: Project[] = [
   {
     title: "Kitchen Renovation - Before & After",
     location: "Kent",
-    beforeImg: "/assets/kitchen-before.png",
-    afterImg: "/assets/kitchen-after.png",
+    img: "/assets/kitchen-before-after.png",
     description: "Complete kitchen transformation featuring modern tile work, custom cabinetry, premium lighting, and high-quality finishes. A stunning example of our attention to detail and craftsmanship.",
     isBeforeAfter: true
   },
@@ -126,19 +125,19 @@ export const ProjectsPage: React.FC = () => {
 
                 <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'} order-1`}>
                   {project.beforeImg && project.afterImg ? (
-                    <div className="grid grid-cols-2 gap-4 h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px]">
-                      <div className="h-full w-full overflow-hidden rounded-lg shadow-lg">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="overflow-hidden rounded-lg shadow-lg">
                         <img
                           src={project.beforeImg}
                           alt={`${project.title} - Before`}
-                          className="enhanced-image w-full h-full object-cover"
+                          className="enhanced-image w-full h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px] object-cover"
                         />
                       </div>
-                      <div className="h-full w-full overflow-hidden rounded-lg shadow-lg">
+                      <div className="overflow-hidden rounded-lg shadow-lg">
                         <img
                           src={project.afterImg}
                           alt={`${project.title} - After`}
-                          className="enhanced-image w-full h-full object-cover"
+                          className="enhanced-image w-full h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px] object-cover"
                         />
                       </div>
                     </div>
@@ -146,9 +145,7 @@ export const ProjectsPage: React.FC = () => {
                     <img
                       src={project.img}
                       alt={project.title}
-                      className={`enhanced-image w-full object-cover rounded-lg shadow-lg ${
-                        project.isBeforeAfter ? 'h-[700px] sm:h-[850px] md:h-[1100px] lg:h-[1100px]' : 'h-auto'
-                      }`}
+                      className="enhanced-image w-full object-cover rounded-lg shadow-lg h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px]"
                     />
                   )}
                 </div>
