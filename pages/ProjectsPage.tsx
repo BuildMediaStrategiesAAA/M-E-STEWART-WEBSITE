@@ -126,18 +126,18 @@ export const ProjectsPage: React.FC = () => {
                 <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'} order-1`}>
                   {project.beforeImg && project.afterImg ? (
                     <div className="grid grid-cols-2 gap-4">
-                      <div className="overflow-hidden rounded-lg shadow-lg">
+                      <div className="w-full h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px] overflow-hidden rounded-lg shadow-lg">
                         <img
                           src={project.beforeImg}
                           alt={`${project.title} - Before`}
-                          className="enhanced-image w-full h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px] object-cover"
+                          className="enhanced-image w-full h-full object-cover"
                         />
                       </div>
-                      <div className="overflow-hidden rounded-lg shadow-lg">
+                      <div className="w-full h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px] overflow-hidden rounded-lg shadow-lg">
                         <img
                           src={project.afterImg}
                           alt={`${project.title} - After`}
-                          className="enhanced-image w-full h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px] object-cover"
+                          className="enhanced-image w-full h-full object-cover"
                         />
                       </div>
                     </div>
