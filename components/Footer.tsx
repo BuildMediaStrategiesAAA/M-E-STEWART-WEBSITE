@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center">
           <img
-            src="/assets/logo.png"
+            src="/assets/chatgpt_image_dec_7,_2025,_07_24_14_pm.png"
             alt="M E Stewart Building Contractor"
             className="w-auto h-20 md:h-24 object-contain"
           />
