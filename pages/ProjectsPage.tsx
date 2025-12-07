@@ -125,19 +125,21 @@ export const ProjectsPage: React.FC = () => {
 
                 <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'} order-1`}>
                   {project.beforeImg && project.afterImg ? (
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="w-full h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px] overflow-hidden rounded-lg shadow-lg">
+                    <div className="grid grid-cols-2 gap-4 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[400px]">
+                      <div className="w-full h-full overflow-hidden rounded-lg shadow-lg">
                         <img
                           src={project.beforeImg}
                           alt={`${project.title} - Before`}
                           className="enhanced-image w-full h-full object-cover"
+                          style={{ objectFit: 'cover' }}
                         />
                       </div>
-                      <div className="w-full h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px] overflow-hidden rounded-lg shadow-lg">
+                      <div className="w-full h-full overflow-hidden rounded-lg shadow-lg">
                         <img
                           src={project.afterImg}
                           alt={`${project.title} - After`}
                           className="enhanced-image w-full h-full object-cover"
+                          style={{ objectFit: 'cover' }}
                         />
                       </div>
                     </div>
@@ -145,7 +147,7 @@ export const ProjectsPage: React.FC = () => {
                     <img
                       src={project.img}
                       alt={project.title}
-                      className="enhanced-image w-full object-cover rounded-lg shadow-lg h-[350px] sm:h-[425px] md:h-[550px] lg:h-[550px]"
+                      className="enhanced-image w-full object-cover rounded-lg shadow-lg h-[300px] sm:h-[350px] md:h-[400px] lg:h-[400px]"
                     />
                   )}
                 </div>
