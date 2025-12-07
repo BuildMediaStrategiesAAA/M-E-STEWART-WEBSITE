@@ -114,25 +114,11 @@ export const ProjectsPage: React.FC = () => {
                 </div>
 
                 <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'} order-1`}>
-                  {project.isBeforeAfter ? (
-                    <div className="before-after-container">
-                      <div className="before-after-labels">
-                        <span className="before-label">BEFORE</span>
-                        <span className="after-label">AFTER</span>
-                      </div>
-                      <img
-                        src={project.img}
-                        alt={project.title}
-                        className="enhanced-image w-full h-auto object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                  ) : (
-                    <img
-                      src={project.img}
-                      alt={project.title}
-                      className="enhanced-image w-full h-auto object-cover rounded-lg shadow-lg"
-                    />
-                  )}
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    className="enhanced-image w-full h-auto object-cover rounded-lg shadow-lg"
+                  />
                 </div>
               </div>
             </div>
@@ -194,44 +180,6 @@ export const ProjectsPage: React.FC = () => {
             image-rendering: -webkit-optimize-contrast;
             image-rendering: high-quality;
           }
-        }
-
-        .before-after-container {
-          position: relative;
-          width: 100%;
-        }
-
-        .before-after-labels {
-          position: absolute;
-          top: 8px;
-          left: 0;
-          right: 0;
-          z-index: 10;
-          display: flex;
-          justify-content: space-between;
-          padding: 0 20%;
-          pointer-events: none;
-        }
-
-        .before-label,
-        .after-label {
-          background: #1E3A8A;
-          color: white;
-          padding: 4px 16px;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 1.5px;
-          text-transform: uppercase;
-          border-radius: 4px;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .before-label {
-          border-left: 3px solid #3B82F6;
-        }
-
-        .after-label {
-          border-right: 3px solid #3B82F6;
         }
       `}</style>
     </div>
