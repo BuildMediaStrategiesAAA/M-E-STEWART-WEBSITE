@@ -4,20 +4,15 @@ type Project = {
   title: string;
   location: string;
   description: string;
-  img?: string;
-  beforeImg?: string;
-  afterImg?: string;
-  isBeforeAfter?: boolean;
+  img: string;
 };
 
 const projects: Project[] = [
   {
-    title: "Kitchen Renovation",
+    title: "Kitchen Renovation - Before & After",
     location: "Kent",
-    beforeImg: "/assets/image.png",
-    afterImg: "/assets/image.png",
-    description: "Complete kitchen transformation featuring modern tile work, custom cabinetry, premium lighting, and high-quality finishes. A stunning example of our attention to detail and craftsmanship.",
-    isBeforeAfter: true
+    img: "/assets/kitchen-before-after.png",
+    description: "Complete kitchen transformation featuring modern tile work, custom cabinetry, premium lighting, and high-quality finishes. A stunning example of our attention to detail and craftsmanship."
   },
   {
     title: "Modern Family Extension",
@@ -93,56 +88,6 @@ export const ProjectsPage: React.FC = () => {
       {projects.map((project, index) => {
         const isEven = index % 2 === 0;
 
-        if (project.isBeforeAfter) {
-          return (
-            <section
-              key={index}
-              className={`py-16 px-6 sm:px-12 lg:px-24 ${
-                isEven ? 'bg-white' : 'bg-slate-50'
-              }`}
-            >
-              <div className="mx-auto max-w-7xl">
-                <div className="space-y-8">
-                  <div className="text-center space-y-4">
-                    <p className="text-sm font-bold uppercase tracking-wide text-brand-blue">
-                      {project.location}
-                    </p>
-                    <h2 className="text-3xl sm:text-4xl font-bold uppercase text-brand-darkBlue">
-                      {project.title}
-                    </h2>
-                    <p className="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-bold uppercase text-brand-darkBlue text-center">
-                        Before
-                      </h3>
-                      <img
-                        src={project.beforeImg}
-                        alt={`${project.title} - Before`}
-                        className="enhanced-image w-full h-auto object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-bold uppercase text-brand-darkBlue text-center">
-                        After
-                      </h3>
-                      <img
-                        src={project.afterImg}
-                        alt={`${project.title} - After`}
-                        className="enhanced-image w-full h-auto object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        }
-
         return (
           <section
             key={index}
@@ -170,7 +115,7 @@ export const ProjectsPage: React.FC = () => {
                   <img
                     src={project.img}
                     alt={project.title}
-                    className="w-full h-auto object-cover rounded-lg"
+                    className="enhanced-image w-full h-auto object-cover rounded-lg shadow-lg"
                   />
                 </div>
               </div>
