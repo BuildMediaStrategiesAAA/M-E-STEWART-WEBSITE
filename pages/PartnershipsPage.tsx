@@ -46,38 +46,27 @@ export const PartnershipsPage: React.FC = () => {
       </div>
 
       <section className="py-24 px-6 sm:px-12 lg:px-24 bg-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold uppercase text-brand-darkBlue mb-6">
+            Estate Agent Partnerships
+          </h2>
+          <div className="mx-auto h-1 w-24 bg-brand-blue mb-8"></div>
+          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <p>
+              Ongoing maintenance and building work for estate agents.
+            </p>
             <div>
-              <h2 className="text-4xl sm:text-5xl font-bold uppercase text-brand-darkBlue mb-6">
-                Estate Agent Partnerships
-              </h2>
-              <div className="h-1 w-24 bg-brand-blue mb-8"></div>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                <p>
-                  Ongoing maintenance and building work for estate agents.
-                </p>
-                <div>
-                  <p className="font-semibold text-brand-darkBlue mb-3">Current work carried out for:</p>
-                  <ul className="space-y-2 ml-6">
-                    <li className="flex items-start">
-                      <span className="text-brand-blue mr-3 mt-1">•</span>
-                      <span>Martins & Co</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-brand-blue mr-3 mt-1">•</span>
-                      <span>Jenkinson's Estate Agents and Lettings</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="order-first lg:order-last">
-              <img
-                src="/assets/portfolio-1.webp"
-                alt="Property maintenance work"
-                className="w-full h-auto rounded-lg"
-              />
+              <p className="font-semibold text-brand-darkBlue mb-3">Current work carried out for:</p>
+              <ul className="space-y-2 inline-block text-left">
+                <li className="flex items-start">
+                  <span className="text-brand-blue mr-3 mt-1">•</span>
+                  <span>Martins & Co</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-blue mr-3 mt-1">•</span>
+                  <span>Jenkinson's Estate Agents and Lettings</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
