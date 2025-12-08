@@ -5,22 +5,26 @@ const projects = [
   {
     title: "Kitchen Renovation",
     category: "Kent",
-    img: "/assets/image copy.png"
+    img: "/assets/image copy.png",
+    alt: "Modern kitchen renovation completed in Kent home"
   },
   {
     title: "Staircase Renovation",
     category: "Kent",
-    img: "/assets/mark_stewart_conversion_stairs_after.webp"
+    img: "/assets/mark_stewart_conversion_stairs_after.webp",
+    alt: "Staircase conversion project in Kent property"
   },
   {
     title: "Bathroom Refurbishment",
     category: "Deal, Kent",
-    img: "/assets/mark_stewart_bathroom_refurb_.jpeg"
+    img: "/assets/mark_stewart_bathroom_refurb_.jpeg",
+    alt: "Bathroom refurbishment completed in Deal home"
   },
   {
     title: "Full House Renovation",
     category: "Canterbury, Kent",
-    img: "/assets/mark_steward_conversion_after.webp"
+    img: "/assets/mark_steward_conversion_after.webp",
+    alt: "House renovation project completed in Canterbury"
   }
 ];
 
@@ -94,7 +98,7 @@ export const Portfolio: React.FC = () => {
             >
               <img
                 src={project.img}
-                alt={project.title}
+                alt={project.alt}
                 loading="eager"
                 className="mobile-scale h-full w-full object-cover transition-transform duration-500 lg:group-hover:scale-110"
               />

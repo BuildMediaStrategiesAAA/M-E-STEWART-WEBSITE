@@ -65,14 +65,14 @@ export const Hero: React.FC = () => {
           </div>
 
           <h1 className="mb-6 text-4xl font-bold uppercase leading-tight text-white sm:text-5xl md:text-7xl drop-shadow-lg">
-            Constructing <br />
-            <span className="text-blue-400">Your Vision</span> <br />
-            Built to Last.
+            Experienced Builders <br />
+            Based in <span className="text-blue-400">Deal</span><br />
+            Covering Dover & Beyond
           </h1>
 
           <div className="mb-10 max-w-xl rounded-2xl bg-black/60 p-6 backdrop-blur-md border border-white/10 shadow-2xl">
             <p className="text-lg text-white font-light leading-relaxed sm:text-xl">
-              Master craftsmanship for projects in Deal and Kent. Building with precision, integrity, and bold design.
+              Master craftsmanship for projects across Deal, Dover, and Kent. Building with precision, integrity, and bold design.
             </p>
           </div>
 

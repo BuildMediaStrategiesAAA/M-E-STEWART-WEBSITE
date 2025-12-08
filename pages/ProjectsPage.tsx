@@ -5,9 +5,12 @@ type Project = {
   location: string;
   description: string;
   img?: string;
+  alt?: string;
   isBeforeAfter?: boolean;
   beforeImg?: string;
   afterImg?: string;
+  beforeAlt?: string;
+  afterAlt?: string;
 };
 
 const projects: Project[] = [
@@ -17,7 +20,9 @@ const projects: Project[] = [
     beforeImg: "/assets/image.png",
     afterImg: "/assets/image copy.png",
     description: "Complete kitchen transformation featuring modern tile work, custom cabinetry, premium lighting, and high-quality finishes. A stunning example of our attention to detail and craftsmanship.",
-    isBeforeAfter: true
+    isBeforeAfter: true,
+    beforeAlt: "Kitchen renovation before - Kent property",
+    afterAlt: "Kitchen extension completed in Kent home"
   },
   {
     title: "Staircase Renovation - Before & After",
@@ -25,13 +30,16 @@ const projects: Project[] = [
     beforeImg: "/assets/mark_stewart_conversion_stairs_before.webp",
     afterImg: "/assets/mark_stewart_conversion_stairs_after.webp",
     description: "Complete staircase transformation from raw construction to elegant finished design. Features custom white painted posts, dark carpeted treads, and modern glass balustrades creating a sophisticated interior space.",
-    isBeforeAfter: true
+    isBeforeAfter: true,
+    beforeAlt: "Staircase conversion before - Kent property",
+    afterAlt: "Loft conversion staircase completed in Kent"
   },
   {
     title: "Bathroom Refurbishment",
     location: "Deal, Kent",
     img: "/assets/mark_stewart_bathroom_refurb_.jpeg",
-    description: "Complete bathroom transformation featuring modern fixtures, premium tiling, elegant lighting, and high-quality finishes. A sophisticated space that combines style with functionality."
+    description: "Complete bathroom transformation featuring modern fixtures, premium tiling, elegant lighting, and high-quality finishes. A sophisticated space that combines style with functionality.",
+    alt: "Bathroom refurbishment completed in Deal"
   },
   {
     title: "Bathroom Refurbishment - Before & After",
@@ -39,13 +47,16 @@ const projects: Project[] = [
     beforeImg: "/assets/mark_stewart_house_refurb_image_before.jpeg",
     afterImg: "/assets/mark_stewart_house_refurb_after.jpeg",
     description: "Complete bathroom refurbishment featuring new fixtures, tiling, and finishes.",
-    isBeforeAfter: true
+    isBeforeAfter: true,
+    beforeAlt: "Bathroom refurbishment before - Deal home",
+    afterAlt: "Bathroom renovation completed in Deal property"
   },
   {
     title: "Luxury Kitchen & Living",
     location: "Walmer, Kent",
     img: "/assets/mark_stewart_kitchen_refurb_.jpeg",
-    description: "High-end kitchen renovation with bespoke cabinetry, premium appliances, and designer finishes."
+    description: "High-end kitchen renovation with bespoke cabinetry, premium appliances, and designer finishes.",
+    alt: "Luxury kitchen renovation in Walmer Kent"
   },
   {
     title: "Full House Renovation - Before & After",
@@ -53,7 +64,9 @@ const projects: Project[] = [
     beforeImg: "/assets/mark_stewart_conversion_job_before.webp",
     afterImg: "/assets/mark_steward_conversion_after.webp",
     description: "Complete house renovation featuring updated finishes, fixtures, and interior improvements throughout.",
-    isBeforeAfter: true
+    isBeforeAfter: true,
+    beforeAlt: "House renovation before - Canterbury property",
+    afterAlt: "Full house renovation completed in Canterbury"
   }
 ];
 
@@ -63,11 +76,11 @@ export const ProjectsPage: React.FC = () => {
       <div className="bg-gradient-to-br from-brand-darkBlue to-brand-blue text-white py-20 px-6 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold uppercase mb-6 animate-fade-in">
-            Our Projects
+            Our Projects in Deal, Dover & Kent
           </h1>
           <div className="mx-auto h-1 w-32 bg-white mb-6"></div>
           <p className="text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
-            Explore our portfolio of completed projects across Kent. Each build reflects our commitment to quality, craftsmanship, and client satisfaction.
+            Explore our portfolio of completed projects across Deal, Dover, and Kent. Each build reflects our commitment to quality, craftsmanship, and client satisfaction.
           </p>
         </div>
       </div>
@@ -104,7 +117,7 @@ export const ProjectsPage: React.FC = () => {
                       <div className="project-image-container">
                         <img
                           src={project.beforeImg}
-                          alt={`${project.title} - Before`}
+                          alt={project.beforeAlt || `${project.title} - Before`}
                           loading="eager"
                           className="project-image"
                         />
@@ -112,7 +125,7 @@ export const ProjectsPage: React.FC = () => {
                       <div className="project-image-container">
                         <img
                           src={project.afterImg}
-                          alt={`${project.title} - After`}
+                          alt={project.afterAlt || `${project.title} - After`}
                           loading="eager"
                           className="project-image"
                         />
@@ -122,7 +135,7 @@ export const ProjectsPage: React.FC = () => {
                     <div className="project-image-container">
                       <img
                         src={project.img}
-                        alt={project.title}
+                        alt={project.alt || project.title}
                         loading="eager"
                         className="project-image"
                       />

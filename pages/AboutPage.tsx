@@ -65,7 +65,7 @@ export const AboutPage: React.FC = () => {
           </h1>
           <div className="mx-auto h-1 w-32 bg-white mb-6"></div>
           <p className="text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
-            Building Contractors in Kent
+            Building Contractors Based in Deal, Serving Dover & Kent
           </p>
         </div>
       </div>
