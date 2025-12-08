@@ -34,11 +34,11 @@ const projects: Project[] = [
     description: "Complete bathroom transformation featuring modern fixtures, premium tiling, elegant lighting, and high-quality finishes. A sophisticated space that combines style with functionality."
   },
   {
-    title: "Victorian Property Restoration",
-    location: "Dover, Kent",
+    title: "Bathroom Refurbishment",
+    location: "Deal, Kent",
     beforeImg: "/assets/mark_stewart_house_refurb_image_before.jpeg",
     afterImg: "/assets/mark_stewart_house_refurb_after.jpeg",
-    description: "Full restoration of a Victorian townhouse, preserving period features while modernizing systems and amenities.",
+    description: "Complete bathroom refurbishment featuring new fixtures, tiling, and finishes.",
     isBeforeAfter: true
   },
   {
