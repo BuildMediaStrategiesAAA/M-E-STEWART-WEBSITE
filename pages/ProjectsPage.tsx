@@ -105,6 +105,7 @@ export const ProjectsPage: React.FC = () => {
                         <img
                           src={project.beforeImg}
                           alt={`${project.title} - Before`}
+                          loading="eager"
                           className="project-image"
                         />
                       </div>
@@ -112,6 +113,7 @@ export const ProjectsPage: React.FC = () => {
                         <img
                           src={project.afterImg}
                           alt={`${project.title} - After`}
+                          loading="eager"
                           className="project-image"
                         />
                       </div>
@@ -121,6 +123,7 @@ export const ProjectsPage: React.FC = () => {
                       <img
                         src={project.img}
                         alt={project.title}
+                        loading="eager"
                         className="project-image"
                       />
                     </div>

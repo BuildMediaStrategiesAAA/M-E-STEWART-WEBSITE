@@ -42,7 +42,7 @@ export const Portfolio: React.FC = () => {
             }
           });
         },
-        { threshold: 0.3 }
+        { threshold: 0.5 }
       );
 
       observer.observe(card);
@@ -95,6 +95,7 @@ export const Portfolio: React.FC = () => {
               <img
                 src={project.img}
                 alt={project.title}
+                loading="eager"
                 className="mobile-scale h-full w-full object-cover transition-transform duration-500 lg:group-hover:scale-110"
               />
               <div className="mobile-overlay absolute inset-0 bg-gradient-to-t from-brand-darkBlue/90 to-transparent opacity-0 transition-opacity duration-300 lg:group-hover:opacity-100 flex flex-col justify-end p-8">
