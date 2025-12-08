@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/chatgpt_image_dec_7,_2025,_07_24_14_pm.png';
+import logo from '../assets/chatgpt_image_dec_8,_2025,_06_20_23_pm.png';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,11 +48,13 @@ export const Header: React.FC = () => {
           transition: transform 0.3s ease;
         }
 
-        @media (min-width: 1024px) {
-          .nav-link.active::after {
-            animation: underlineSlide 0.4s ease-out forwards, shimmer 1s ease-in-out 0.4s 1;
-            transform: scaleX(1);
-          }
+        .nav-link:hover::after {
+          transform: scaleX(1);
+        }
+
+        .nav-link.active::after {
+          animation: underlineSlide 0.4s ease-out forwards, shimmer 1s ease-in-out 0.4s 1;
+          transform: scaleX(1);
         }
       `}</style>
 
@@ -62,18 +64,16 @@ export const Header: React.FC = () => {
           boxShadow: '0 4px 20px rgba(0, 149, 255, 0.6), 0 2px 8px rgba(0, 149, 255, 0.8)'
         }}
       >
-        <div className="flex items-center justify-between px-4 md:px-8 lg:px-16 py-3">
-          {/* Logo — back to working version */}
-          <Link to="/" className="flex items-center">
+        <div className="flex items-center justify-between px-4 md:px-8 lg:px-16 py-4">
+          <Link to="/" className="flex items-center flex-shrink-0">
             <img
               src={logo}
               alt="M E Stewart Contractors"
-              className="w-auto h-20 sm:h-24 md:h-28 object-contain"
+              className="h-16 w-auto object-contain"
             />
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8" onMouseLeave={() => setActiveLink(null)}>
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8" onMouseLeave={() => setActiveLink(null)}>
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -88,45 +88,46 @@ export const Header: React.FC = () => {
             ))}
             <Link
               to="/contact"
-              className="rounded-full px-6 py-2 text-sm font-bold uppercase transition-colors bg-brand-blue text-white hover:bg-brand-darkBlue"
+              className="rounded-full px-6 py-2 text-sm font-bold uppercase transition-all duration-300 bg-brand-blue text-white hover:bg-brand-darkBlue hover:shadow-lg"
             >
               Get Quote
             </Link>
           </nav>
 
-          {/* Mobile Toggle */}
           <button
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <X className="text-brand-darkBlue w-5 h-5 sm:w-6 sm:h-6" />
+              <X className="text-brand-darkBlue w-6 h-6" />
             ) : (
-              <Menu className="text-brand-darkBlue w-5 h-5 sm:w-6 sm:h-6" />
+              <Menu className="text-brand-darkBlue w-6 h-6" />
             )}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white shadow-xl md:hidden flex flex-col items-center py-8 gap-6 animate-fade-in-down">
-            {navLinks.map((link) => (
+          <div className="absolute top-full left-0 w-full bg-white shadow-xl md:hidden">
+            <nav className="flex flex-col items-center py-8 gap-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-bold uppercase text-brand-darkBlue hover:text-brand-blue transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
               <Link
-                key={link.name}
-                to={link.href}
+                to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="nav-link text-lg font-bold uppercase text-brand-darkBlue hover:text-brand-blue"
+                className="mt-4 px-8 py-3 bg-brand-blue text-white font-bold uppercase rounded-full hover:bg-brand-darkBlue transition-colors"
               >
-                {link.name}
+                Get Quote
               </Link>
-            ))}
-            <Link
-              to="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 px-8 py-3 bg-brand-blue text-white font-bold uppercase rounded-full"
-            >
-              Get Quote
-            </Link>
+            </nav>
           </div>
         )}
       </header>
