@@ -39,46 +39,10 @@ const projects: Project[] = [
     description: "Full restoration of a Victorian townhouse, preserving period features while modernizing systems and amenities."
   },
   {
-    title: "Commercial Office Hub",
-    location: "Sandwich, Kent",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1470&auto=format&fit=crop",
-    description: "Modern commercial space with open-plan offices, meeting rooms, and collaborative work areas."
-  },
-  {
     title: "Luxury Kitchen & Living",
     location: "Walmer, Kent",
     img: "/assets/mark_stewart_kitchen_refurb_.jpeg",
     description: "High-end kitchen renovation with bespoke cabinetry, premium appliances, and designer finishes."
-  },
-  {
-    title: "Coastal New Build",
-    location: "Kingsdown, Kent",
-    img: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1470&auto=format&fit=crop",
-    description: "Contemporary four-bedroom home with sea views, featuring sustainable materials and smart home technology."
-  },
-  {
-    title: "Loft Conversion Suite",
-    location: "Canterbury, Kent",
-    img: "/assets/mark_stewart_conversion_job_before.webp",
-    description: "Master bedroom suite with en-suite bathroom and walk-in wardrobe, maximizing attic space."
-  },
-  {
-    title: "Retail Store Fit-Out",
-    location: "Deal, Kent",
-    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop",
-    description: "Contemporary retail space with custom display fixtures, modern lighting, and efficient layout."
-  },
-  {
-    title: "Georgian Townhouse Renovation",
-    location: "Ramsgate, Kent",
-    img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1470&auto=format&fit=crop",
-    description: "Sympathetic renovation respecting Georgian architecture while incorporating modern comfort and efficiency."
-  },
-  {
-    title: "Contemporary New Build",
-    location: "Whitstable, Kent",
-    img: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1484&auto=format&fit=crop",
-    description: "Modern three-bedroom house with clean lines, open-plan living, and energy-efficient design."
   }
 ];
 
