@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/chatgpt_image_dec_7,_2025,_07_24_14_pm.png';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -61,7 +62,15 @@ export const Header: React.FC = () => {
           boxShadow: '0 4px 20px rgba(0, 149, 255, 0.6), 0 2px 8px rgba(0, 149, 255, 0.8)'
         }}
       >
-        <div className="flex items-center justify-end px-3 sm:px-4 md:px-8 lg:px-16 py-4">
+        <div className="flex items-center justify-between px-3 sm:px-4 md:px-8 lg:px-16 py-4">
+          <Link to="/" className="flex-shrink-0">
+            <img
+              src={logo}
+              alt="M E Stewart Builders"
+              className="h-12 w-auto object-contain"
+            />
+          </Link>
+
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8" onMouseLeave={() => setActiveLink(null)}>
             {navLinks.map((link) => (
