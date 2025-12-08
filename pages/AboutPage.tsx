@@ -23,10 +23,10 @@ export const AboutPage: React.FC = () => {
           <div className="h-1 w-24 bg-brand-blue mb-8"></div>
           <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
             <p>
-              M E Stewart Building Contractors Ltd has 28 years of experience in the building trade.
+              We have 28 years of experience in the building trade.
             </p>
             <p>
-              The business delivers residential and commercial building work across the south-east corner of Kent.
+              We deliver residential and commercial building work across the south-east corner of Kent.
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export const AboutPage: React.FC = () => {
           <div className="h-1 w-24 bg-brand-blue mb-8"></div>
           <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
             <p>
-              M E Stewart Building Contractors Ltd operates across the following areas:
+              We operate across the following areas:
             </p>
             <ul className="space-y-2 ml-6">
               <li>Deal</li>
@@ -53,7 +53,7 @@ export const AboutPage: React.FC = () => {
               <li>Sandgate</li>
             </ul>
             <p>
-              The company also covers the wider south-east Kent area.
+              We also cover the wider south-east Kent area.
             </p>
           </div>
         </div>
@@ -67,10 +67,10 @@ export const AboutPage: React.FC = () => {
           <div className="h-1 w-24 bg-brand-blue mb-8"></div>
           <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
             <p>
-              Work is carried out with a team of trusted tradesmen.
+              We work with a team of trusted tradesmen.
             </p>
             <p>
-              All trades are covered depending on the project requirements.
+              We cover all trades depending on the project requirements.
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@ export const AboutPage: React.FC = () => {
           <div className="h-1 w-24 bg-brand-blue mb-8"></div>
           <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
             <p>
-              M E Stewart Building Contractors Ltd carries out maintenance and building work for estate agents including Martins & Co and Jenkinson's Estate Agents and Lettings.
+              We carry out maintenance and building work for estate agents including Martins & Co and Jenkinson's Estate Agents and Lettings.
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@ export const AboutPage: React.FC = () => {
           <div className="h-1 w-24 bg-brand-blue mb-8"></div>
           <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
             <p>
-              The company undertakes the following types of work:
+              We undertake the following types of work:
             </p>
             <ul className="space-y-2 ml-6">
               <li>Extensions and conversions</li>
@@ -119,13 +119,13 @@ export const AboutPage: React.FC = () => {
           <div className="h-1 w-24 bg-brand-blue mb-8"></div>
           <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
             <p>
-              Projects are managed from start to finish.
+              We manage projects from start to finish.
             </p>
             <p>
-              Coordination of trades is handled internally.
+              We coordinate all trades internally.
             </p>
             <p>
-              Clear communication is maintained throughout the build.
+              We maintain clear communication throughout the build.
             </p>
           </div>
         </div>
