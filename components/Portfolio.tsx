@@ -3,24 +3,24 @@ import { Link } from 'react-router-dom';
 
 const projects = [
   {
-    title: "Modern Extension",
-    category: "Residential - Deal",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1470&auto=format&fit=crop"
+    title: "Kitchen Renovation - Before & After",
+    category: "Kent",
+    img: "/assets/image copy.png"
   },
   {
-    title: "Urban Loft",
-    category: "Renovation - Dover",
-    img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1453&auto=format&fit=crop"
+    title: "Staircase Renovation - Before & After",
+    category: "Kent",
+    img: "/assets/mark_stewart_conversion_stairs_after.webp"
   },
   {
-    title: "Commercial Hub",
-    category: "Commercial - Sandwich",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1470&auto=format&fit=crop"
+    title: "Bathroom Refurbishment - Before & After",
+    category: "Deal, Kent",
+    img: "/assets/mark_stewart_house_refurb_after.jpeg"
   },
   {
-    title: "Luxury Kitchen",
-    category: "Interior - Walmer",
-    img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1470&auto=format&fit=crop"
+    title: "Full House Renovation - Before & After",
+    category: "Canterbury, Kent",
+    img: "/assets/mark_steward_conversion_after.webp"
   }
 ];
 
