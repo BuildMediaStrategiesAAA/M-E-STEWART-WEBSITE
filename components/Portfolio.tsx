@@ -3,22 +3,22 @@ import { Link } from 'react-router-dom';
 
 const projects = [
   {
-    title: "Kitchen Renovation - Before & After",
+    title: "Kitchen Renovation",
     category: "Kent",
     img: "/assets/image copy.png"
   },
   {
-    title: "Staircase Renovation - Before & After",
+    title: "Staircase Renovation",
     category: "Kent",
     img: "/assets/mark_stewart_conversion_stairs_after.webp"
   },
   {
-    title: "Bathroom Refurbishment - Before & After",
+    title: "Bathroom Refurbishment",
     category: "Deal, Kent",
-    img: "/assets/mark_stewart_house_refurb_after.jpeg"
+    img: "/assets/mark_stewart_bathroom_refurb_.jpeg"
   },
   {
-    title: "Full House Renovation - Before & After",
+    title: "Full House Renovation",
     category: "Canterbury, Kent",
     img: "/assets/mark_steward_conversion_after.webp"
   }
