@@ -71,41 +71,22 @@ export const Portfolio: React.FC = () => {
     <section id="projects" className="py-20 px-6 sm:px-12 lg:px-24 bg-white">
       <style>{`
         @media (max-width: 1023px) {
-          .portfolio-card {
-            opacity: 0;
-            transform: translateY(40px) scale(0.95);
-            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-          }
-
-          .portfolio-card.card-visible {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-
           .portfolio-card .mobile-scale {
             transform: scale(1);
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           }
 
           .portfolio-card.card-visible .mobile-scale {
-            transform: scale(1.05);
+            transform: scale(1.1);
           }
 
           .portfolio-card .mobile-overlay {
             opacity: 0;
-            transition: opacity 0.4s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
           }
 
           .portfolio-card.card-visible .mobile-overlay {
             opacity: 1;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .portfolio-card {
-            opacity: 1;
-            transform: none;
           }
         }
       `}</style>
