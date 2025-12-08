@@ -14,15 +14,16 @@ const projects: Project[] = [
   {
     title: "Kitchen Renovation - Before & After",
     location: "Kent",
-    img: "/assets/kitchen-before-after.png",
+    beforeImg: "/assets/kitchen-before.png",
+    afterImg: "/assets/kitchen-after.png",
     description: "Complete kitchen transformation featuring modern tile work, custom cabinetry, premium lighting, and high-quality finishes. A stunning example of our attention to detail and craftsmanship.",
     isBeforeAfter: true
   },
   {
     title: "Staircase Renovation - Before & After",
     location: "Kent",
-    beforeImg: "/assets/mark_stewart_conversion_job_before.webp",
-    afterImg: "/assets/mark_steward_conversion_after.webp",
+    beforeImg: "/assets/mark_stewart_conversion_stairs_before.webp",
+    afterImg: "/assets/mark_stewart_conversion_stairs_after.webp",
     description: "Complete staircase transformation from raw construction to elegant finished design. Features custom white painted posts, dark carpeted treads, and modern glass balustrades creating a sophisticated interior space.",
     isBeforeAfter: true
   },
@@ -47,8 +48,10 @@ const projects: Project[] = [
   {
     title: "Loft Conversion Suite",
     location: "Canterbury, Kent",
-    img: "/assets/mark_stewart_conversion_job_before.webp",
-    description: "Master bedroom suite with en-suite bathroom and walk-in wardrobe, maximizing attic space."
+    beforeImg: "/assets/mark_stewart_conversion_job_before.webp",
+    afterImg: "/assets/mark_steward_conversion_after.webp",
+    description: "Master bedroom suite with en-suite bathroom and walk-in wardrobe, maximizing attic space.",
+    isBeforeAfter: true
   }
 ];
 
