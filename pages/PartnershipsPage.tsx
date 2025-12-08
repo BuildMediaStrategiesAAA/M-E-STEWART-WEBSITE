@@ -120,6 +120,84 @@ export const PartnershipsPage: React.FC = () => {
       </section>
 
       <section className="py-24 px-6 sm:px-12 lg:px-24 bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="space-y-4">
+                <p className="text-sm font-bold uppercase tracking-wide text-brand-blue">
+                  Before & After
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-bold uppercase text-brand-darkBlue">
+                  Staircase Transformation
+                </h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Complete staircase renovation delivering modern elegance and functionality. Professional craftsmanship ensuring lasting quality for your rental properties.
+                </p>
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="partnership-image-container">
+                  <img
+                    src="/assets/mark_stewart_conversion_stairs_before.webp"
+                    alt="Staircase - Before"
+                    className="partnership-image"
+                  />
+                </div>
+                <div className="partnership-image-container">
+                  <img
+                    src="/assets/mark_stewart_conversion_stairs_after.webp"
+                    alt="Staircase - After"
+                    className="partnership-image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-6 sm:px-12 lg:px-24 bg-slate-50">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2">
+              <div className="space-y-4">
+                <p className="text-sm font-bold uppercase tracking-wide text-brand-blue">
+                  Before & After
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-bold uppercase text-brand-darkBlue">
+                  Property Refurbishment
+                </h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Full property transformation from outdated to move-in ready. Fast turnaround times to minimize void periods and maximize rental returns.
+                </p>
+              </div>
+            </div>
+
+            <div className="order-1">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="partnership-image-container">
+                  <img
+                    src="/assets/mark_stewart_house_refurb_image_before.jpeg"
+                    alt="Property - Before"
+                    className="partnership-image"
+                  />
+                </div>
+                <div className="partnership-image-container">
+                  <img
+                    src="/assets/mark_stewart_house_refurb_after.jpeg"
+                    alt="Property - After"
+                    className="partnership-image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-6 sm:px-12 lg:px-24 bg-white">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-6 text-4xl font-bold uppercase text-brand-darkBlue sm:text-5xl text-center">
             Your Trusted Property Partner
@@ -171,6 +249,45 @@ export const PartnershipsPage: React.FC = () => {
 
         .animate-fade-in {
           animation: fade-in 0.8s ease-out;
+        }
+
+        .partnership-image-container {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          overflow: hidden;
+          border-radius: 0.5rem;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .partnership-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          image-rendering: -webkit-optimize-contrast;
+          image-rendering: crisp-edges;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          transform: translateZ(0);
+          -webkit-transform: translateZ(0);
+          filter: contrast(1.05) brightness(1.02);
+          transition: all 0.3s ease;
+        }
+
+        .partnership-image:hover {
+          filter: contrast(1.08) brightness(1.03);
+          transform: translateZ(0) scale(1.02);
+        }
+
+        @media (min-resolution: 2dppx) {
+          .partnership-image {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: high-quality;
+          }
         }
       `}</style>
     </div>
