@@ -125,30 +125,30 @@ export const ProjectsPage: React.FC = () => {
 
                 <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'} order-1`}>
                   {project.beforeImg && project.afterImg ? (
-                    <div className="grid grid-cols-2 gap-4 h-[280px] sm:h-[300px] md:h-[320px] lg:h-[350px]">
-                      <div className="w-full h-full overflow-hidden rounded-lg shadow-lg">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="project-image-container">
                         <img
                           src={project.beforeImg}
                           alt={`${project.title} - Before`}
-                          className="enhanced-image w-full h-full object-cover"
-                          style={{ objectFit: 'cover' }}
+                          className="project-image"
                         />
                       </div>
-                      <div className="w-full h-full overflow-hidden rounded-lg shadow-lg">
+                      <div className="project-image-container">
                         <img
                           src={project.afterImg}
                           alt={`${project.title} - After`}
-                          className="enhanced-image w-full h-full object-cover"
-                          style={{ objectFit: 'cover' }}
+                          className="project-image"
                         />
                       </div>
                     </div>
                   ) : (
-                    <img
-                      src={project.img}
-                      alt={project.title}
-                      className="enhanced-image w-full object-cover rounded-lg shadow-lg h-[280px] sm:h-[300px] md:h-[320px] lg:h-[350px]"
-                    />
+                    <div className="project-image-container">
+                      <img
+                        src={project.img}
+                        alt={project.title}
+                        className="project-image"
+                      />
+                    </div>
                   )}
                 </div>
               </div>
@@ -188,7 +188,23 @@ export const ProjectsPage: React.FC = () => {
           animation: fade-in 0.8s ease-out;
         }
 
-        .enhanced-image {
+        .project-image-container {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          overflow: hidden;
+          border-radius: 0.5rem;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
           image-rendering: -webkit-optimize-contrast;
           image-rendering: crisp-edges;
           backface-visibility: hidden;
@@ -197,17 +213,15 @@ export const ProjectsPage: React.FC = () => {
           -webkit-transform: translateZ(0);
           filter: contrast(1.05) brightness(1.02);
           transition: all 0.3s ease;
-          max-width: 100%;
-          height: auto;
         }
 
-        .enhanced-image:hover {
+        .project-image:hover {
           filter: contrast(1.08) brightness(1.03);
           transform: translateZ(0) scale(1.02);
         }
 
         @media (min-resolution: 2dppx) {
-          .enhanced-image {
+          .project-image {
             image-rendering: -webkit-optimize-contrast;
             image-rendering: high-quality;
           }
