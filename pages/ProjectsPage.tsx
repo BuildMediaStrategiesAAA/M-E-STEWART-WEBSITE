@@ -43,6 +43,12 @@ const projects: Project[] = [
     location: "Walmer, Kent",
     img: "/assets/mark_stewart_kitchen_refurb_.jpeg",
     description: "High-end kitchen renovation with bespoke cabinetry, premium appliances, and designer finishes."
+  },
+  {
+    title: "Loft Conversion Suite",
+    location: "Canterbury, Kent",
+    img: "/assets/mark_stewart_conversion_job_before.webp",
+    description: "Master bedroom suite with en-suite bathroom and walk-in wardrobe, maximizing attic space."
   }
 ];
 
