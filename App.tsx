@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { CookieConsent } from './components/CookieConsent';
 import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { ProjectsPage } from './pages/ProjectsPage';
@@ -14,6 +15,7 @@ import { TestimonialsPage } from './pages/TestimonialsPage';
 import { FAQsPage } from './pages/FAQsPage';
 import { DealPage } from './pages/DealPage';
 import { DoverPage } from './pages/DoverPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -45,9 +47,11 @@ function App() {
             <Route path="/faqs" element={<FAQsPage />} />
             <Route path="/builders-deal" element={<DealPage />} />
             <Route path="/builders-dover" element={<DoverPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           </Routes>
         </main>
         <Footer />
+        <CookieConsent />
       </div>
     </Router>
   );

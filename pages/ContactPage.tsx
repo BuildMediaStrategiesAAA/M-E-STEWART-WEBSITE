@@ -7,15 +7,20 @@ export const ContactPage: React.FC = () => {
     email: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
+    privacyConsent: false
   });
 
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const target = e.target;
+    const value = target.type === 'checkbox' ? (target as HTMLInputElement).checked : target.value;
+    const name = target.name;
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
@@ -23,7 +28,7 @@ export const ContactPage: React.FC = () => {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', service: '', message: '', privacyConsent: false });
       setSubmitted(false);
     }, 3000);
   };
@@ -137,13 +142,31 @@ export const ContactPage: React.FC = () => {
                       rows={6}
                       className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-brand-blue focus:outline-none transition-colors resize-none"
                       placeholder="Tell us about your project..."
+                      aria-required="true"
                     ></textarea>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="privacyConsent"
+                      name="privacyConsent"
+                      checked={formData.privacyConsent}
+                      onChange={handleChange}
+                      required
+                      className="mt-1 w-4 h-4 text-brand-blue border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 cursor-pointer"
+                      aria-required="true"
+                    />
+                    <label htmlFor="privacyConsent" className="text-sm text-brand-slate">
+                      I agree to the <a href="/privacy-policy" className="text-brand-blue underline hover:text-brand-darkBlue" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and consent to M E Stewart storing and processing my personal data to respond to my inquiry. *
+                    </label>
                   </div>
 
                   <button
                     type="submit"
                     disabled={submitted}
                     className="w-full md:w-auto px-10 py-4 bg-brand-blue text-white font-bold uppercase rounded-full lg:hover:bg-brand-darkBlue transition-all duration-300 shadow-lg lg:hover:shadow-2xl flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    aria-label={submitted ? "Message sent successfully" : "Send message"}
                   >
                     {submitted ? (
                       <>Message Sent!</>
@@ -164,48 +187,44 @@ export const ContactPage: React.FC = () => {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 h-12 w-12 bg-brand-blue rounded-full flex items-center justify-center">
-                      <Phone size={20} />
+                      <Phone size={20} aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-bold uppercase text-sm mb-1">Phone</p>
-                      <a href="tel:01304123456" className="lg:hover:text-brand-blue transition-colors">
-                        01304 123 456
-                      </a>
-                      <br />
-                      <a href="tel:07123456789" className="lg:hover:text-brand-blue transition-colors">
-                        07123 456 789
+                      <a href="tel:07738520388" className="lg:hover:text-brand-blue transition-colors">
+                        07738 520388
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 h-12 w-12 bg-brand-blue rounded-full flex items-center justify-center">
-                      <Mail size={20} />
+                      <Mail size={20} aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-bold uppercase text-sm mb-1">Email</p>
-                      <a href="mailto:info@mestewart.co.uk" className="lg:hover:text-brand-blue transition-colors break-all">
-                        info@mestewart.co.uk
+                      <a href="mailto:markstewart21@sky.com" className="lg:hover:text-brand-blue transition-colors break-all">
+                        markstewart21@sky.com
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 h-12 w-12 bg-brand-blue rounded-full flex items-center justify-center">
-                      <MapPin size={20} />
+                      <MapPin size={20} aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-bold uppercase text-sm mb-1">Address</p>
-                      <p className="leading-relaxed">
+                      <address className="leading-relaxed not-italic">
                         Deal, Kent<br />
                         United Kingdom
-                      </p>
+                      </address>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 h-12 w-12 bg-brand-blue rounded-full flex items-center justify-center">
-                      <Clock size={20} />
+                      <Clock size={20} aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-bold uppercase text-sm mb-1">Working Hours</p>

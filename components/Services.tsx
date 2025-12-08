@@ -92,14 +92,15 @@ export const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div
+            <article
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
               className={`group relative border border-gray-200 bg-white p-8 transition-all lg:hover:-translate-y-2 lg:hover:shadow-xl lg:hover:border-brand-blue ${
                 visibleCards.has(index) ? 'mobile-card-active' : ''
               }`}
+              aria-label={`${service.title} service`}
             >
-              <div className="mobile-icon-bg mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-brand-grey text-brand-blue lg:group-hover:bg-brand-blue lg:group-hover:text-white transition-colors">
+              <div className="mobile-icon-bg mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-brand-grey text-brand-blue lg:group-hover:bg-brand-blue lg:group-hover:text-white transition-colors" aria-hidden="true">
                 <service.icon size={28} />
               </div>
               <h3 className="mb-3 text-2xl font-bold uppercase text-brand-darkBlue">
@@ -108,7 +109,7 @@ export const Services: React.FC = () => {
               <p className="text-gray-600 leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>
