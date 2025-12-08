@@ -57,7 +57,7 @@ const workTypes = [
 
 export const AboutPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-50 pt-36 md:pt-44">
+    <div className="min-h-screen bg-slate-50 pt-44 md:pt-52">
       <div className="bg-gradient-to-br from-brand-darkBlue to-brand-blue text-white py-20 px-6 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold uppercase mb-6 animate-fade-in">
