@@ -23,14 +23,17 @@ export const Header: React.FC = () => {
           0% { transform: scaleX(0); }
           100% { transform: scaleX(1); }
         }
+
         @keyframes shimmer {
           0% { background-position: 200% 0; }
           100% { background-position: -200% 0; }
         }
+
         .nav-link {
           position: relative;
           display: inline-block;
         }
+
         .nav-link::after {
           content: '';
           position: absolute;
@@ -44,6 +47,7 @@ export const Header: React.FC = () => {
           transform-origin: left;
           transition: transform 0.3s ease;
         }
+
         @media (min-width: 1024px) {
           .nav-link.active::after {
             animation: underlineSlide 0.4s ease-out forwards, shimmer 1s ease-in-out 0.4s 1;
@@ -58,13 +62,14 @@ export const Header: React.FC = () => {
           boxShadow: '0 4px 20px rgba(0, 149, 255, 0.6), 0 2px 8px rgba(0, 149, 255, 0.8)'
         }}
       >
-        <div className="flex items-center justify-between px-3 sm:px-4 md:px-8 lg:px-16 py-3 h-[88px]">
-          <Link to="/" className="flex items-center h-full overflow-visible">
+        <div className="flex items-center justify-between px-3 sm:px-4 md:px-8 lg:px-16 py-2">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
             <img
               src={logo}
               alt="M E Stewart Builders"
-              className="h-full w-auto object-contain max-h-full"
-              style={{ display: 'block', paddingTop: '2px', paddingBottom: '2px' }}
+              style={{ maxHeight: '70px', height: 'auto', width: 'auto' }}
+              className="block object-contain"
             />
           </Link>
 
