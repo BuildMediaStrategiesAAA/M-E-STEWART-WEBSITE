@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center">
             <img
-              src="/assets/chatgpt_image_dec_8,_2025,_06_20_23_pm.png"
+              src="/assets/chatgpt_image_dec_7,_2025,_07_24_14_pm.png"
               alt="M E Stewart Building Contractor"
               className="w-auto h-20 md:h-24 object-contain"
             />

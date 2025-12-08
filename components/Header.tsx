@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/logo.png';
+import logo from '../assets/chatgpt_image_dec_8,_2025,_06_20_23_pm.png';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
