@@ -176,47 +176,40 @@ export const ServicesPage: React.FC = () => {
         </div>
       </div>
 
-      {services.map((service, index) => (
-        <section
-          key={index}
-          className={`py-16 px-6 sm:px-12 lg:px-24 ${
-            index % 2 === 0 ? 'bg-white' : 'bg-slate-50'
-          }`}
-        >
-          <div className="mx-auto max-w-7xl">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
-              index % 2 === 0 ? '' : 'lg:flex-row-reverse'
-            }`}>
-              <div className={index % 2 === 0 ? '' : 'lg:order-2'}>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-brand-blue text-white">
-                    <service.icon size={28} />
-                  </div>
-                  <h2 className="text-3xl sm:text-4xl font-bold uppercase text-brand-darkBlue">
-                    {service.title}
-                  </h2>
-                </div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-              <div className={`${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                <div className="w-full aspect-[4/3] rounded-lg shadow-lg overflow-hidden relative group">
+      <section className="py-20 px-6 sm:px-12 lg:px-24 bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative h-56 overflow-hidden">
                   <img
                     src={service.img}
                     alt={service.alt}
-                    className="w-full h-full object-cover transition-transform duration-500 lg:group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-darkBlue/80 to-transparent opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <h3 className="text-white text-xl font-bold uppercase">{service.title}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-darkBlue via-brand-darkBlue/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 flex h-16 w-16 items-center justify-center rounded-full bg-white/95 text-brand-blue shadow-lg transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <service.icon size={32} strokeWidth={2} />
                   </div>
                 </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold uppercase text-brand-darkBlue mb-3 group-hover:text-brand-blue transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       <section className="py-20 px-6 sm:px-12 lg:px-24 bg-white border-t border-gray-200">
         <div className="mx-auto max-w-6xl">
@@ -276,6 +269,22 @@ export const ServicesPage: React.FC = () => {
 
         .animate-fade-in {
           animation: fade-in 0.8s ease-out;
+        }
+
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fade-in-up 0.6s ease-out forwards;
+          opacity: 0;
         }
 
         @keyframes draw {
