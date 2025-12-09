@@ -49,6 +49,12 @@ export const Services: React.FC = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setVisibleCards((prev) => new Set(prev).add(idx));
+            } else {
+              setVisibleCards((prev) => {
+                const newSet = new Set(prev);
+                newSet.delete(idx);
+                return newSet;
+              });
             }
           });
         },
