@@ -60,13 +60,13 @@ const projects: Project[] = [
   },
   {
     title: "Full House Renovation - Before & After",
-    location: "Canterbury, Kent",
+    location: "Deal, Kent",
     beforeImg: "/assets/mark_stewart_conversion_job_before.webp",
     afterImg: "/assets/mark_steward_conversion_after.webp",
     description: "Complete house renovation featuring updated finishes, fixtures, and interior improvements throughout.",
     isBeforeAfter: true,
-    beforeAlt: "House renovation before - Canterbury property",
-    afterAlt: "Full house renovation completed in Canterbury"
+    beforeAlt: "House renovation before - Deal property",
+    afterAlt: "Full house renovation completed in Deal"
   }
 ];
 
