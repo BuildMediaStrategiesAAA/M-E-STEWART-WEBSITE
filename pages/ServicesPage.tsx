@@ -70,7 +70,7 @@ const services = [
     icon: Hammer,
     title: "Demolition",
     description: "Safe and efficient demolition services for full or partial building removal, including site clearance and waste disposal.",
-    img: "https://images.unsplash.com/photo-1590856029620-d7cd22b36c09?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/gene-gallin-e6km98q_d4o-unsplash.jpg",
     alt: "Professional demolition and site clearance"
   },
   {
@@ -84,15 +84,8 @@ const services = [
     icon: Ruler,
     title: "Extensions / Conversions",
     description: "Expand your living space seamlessly with single-story, double-story, and garage conversions that blend perfectly with existing structures.",
-    img: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/a-rahmat-mn-zheprneyq0w-unsplash.jpg",
     alt: "Home extension and conversion project"
-  },
-  {
-    icon: Building,
-    title: "Period Property Restoration",
-    description: "Specialist restoration of period and heritage properties, preserving character while integrating modern comforts.",
-    img: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop",
-    alt: "Victorian period property restoration"
   },
   {
     icon: PaintBucket,
@@ -105,35 +98,35 @@ const services = [
     icon: Hammer,
     title: "Property Maintenance / Repair",
     description: "Ongoing maintenance and repair services to keep your property in excellent condition year-round.",
-    img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/callum-hill-oamw52scgi0-unsplash.jpg",
     alt: "Property maintenance and repair work"
   },
   {
     icon: Building,
     title: "Garage Conversions",
     description: "Transform unused garage space into functional living areas, home offices, gyms, or additional bedrooms.",
-    img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/thanos-pal-wfov3bn00mu-unsplash.jpg",
     alt: "Garage conversion to living space"
   },
   {
     icon: Award,
     title: "Heritage Property Specialist",
     description: "Expert conservation and restoration of listed and heritage buildings, respecting historical significance and regulations.",
-    img: "https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/tanya-barrow-jduv5-lpmfc-unsplash.jpg",
     alt: "Historic heritage building restoration"
   },
   {
     icon: HardHat,
     title: "Structural Steels",
     description: "Installation of structural steel beams and supports for load-bearing alterations, extensions, and new builds.",
-    img: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?q=80&w=1200&auto=format&fit=crop",
     alt: "Structural steel beam installation"
   },
   {
     icon: Home,
     title: "Garden Studios",
     description: "Beautiful garden studio constructions for home offices, art studios, gyms, or guest accommodations.",
-    img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=1200&auto=format&fit=crop",
     alt: "Modern garden studio office space"
   },
   {
