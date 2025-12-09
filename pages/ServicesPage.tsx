@@ -49,84 +49,84 @@ const services = [
     icon: HardHat,
     title: "Foundations",
     description: "Expert foundation work ensuring solid, stable bases for all construction projects with proper groundwork and drainage.",
-    img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/chatgpt_image_dec_9,_2025,_11_04_33_am.png",
     alt: "Foundation and groundwork construction"
   },
   {
     icon: Shield,
     title: "Insurance Claim Specialist",
     description: "Experienced in handling insurance-related repairs and renovations, working directly with insurers for seamless claims.",
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/chatgpt_image_dec_9,_2025,_11_04_09_am.png",
     alt: "Insurance documentation and property assessment"
   },
   {
     icon: Ruler,
     title: "Structural Design",
     description: "Professional structural engineering and design services to ensure safety, compliance, and optimal building performance.",
-    img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_39_12_am.png",
     alt: "Architectural blueprints and structural design"
   },
   {
     icon: Hammer,
     title: "Demolition",
     description: "Safe and efficient demolition services for full or partial building removal, including site clearance and waste disposal.",
-    img: "/assets/gene-gallin-e6km98q_d4o-unsplash.jpg",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_35_43_am.png",
     alt: "Professional demolition and site clearance"
   },
   {
     icon: Home,
     title: "New Builds",
     description: "Complete project management from foundation to finish. We build dream homes with uncompromising quality and craftsmanship.",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_33_10_am.png",
     alt: "Modern new build residential construction"
   },
   {
     icon: Ruler,
     title: "Extensions / Conversions",
     description: "Expand your living space seamlessly with single-story, double-story, and garage conversions that blend perfectly with existing structures.",
-    img: "/assets/a-rahmat-mn-zheprneyq0w-unsplash.jpg",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_28_10_am.png",
     alt: "Home extension and conversion project"
   },
   {
     icon: PaintBucket,
     title: "Refurbishments",
     description: "Complete property refurbishment services, modernizing interiors and exteriors while maintaining structural integrity.",
-    img: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_25_17_am.png",
     alt: "Interior property refurbishment and renovation"
   },
   {
     icon: Hammer,
     title: "Property Maintenance / Repair",
     description: "Ongoing maintenance and repair services to keep your property in excellent condition year-round.",
-    img: "/assets/callum-hill-oamw52scgi0-unsplash.jpg",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_23_57_am.png",
     alt: "Property maintenance and repair work"
   },
   {
     icon: Building,
     title: "Garage Conversions",
     description: "Transform unused garage space into functional living areas, home offices, gyms, or additional bedrooms.",
-    img: "/assets/thanos-pal-wfov3bn00mu-unsplash.jpg",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_21_52_am.png",
     alt: "Garage conversion to living space"
   },
   {
     icon: Award,
     title: "Heritage Property Specialist",
     description: "Expert conservation and restoration of listed and heritage buildings, respecting historical significance and regulations.",
-    img: "/assets/tanya-barrow-jduv5-lpmfc-unsplash.jpg",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_19_04_am.png",
     alt: "Historic heritage building restoration"
   },
   {
     icon: HardHat,
     title: "Structural Steels",
     description: "Installation of structural steel beams and supports for load-bearing alterations, extensions, and new builds.",
-    img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_13_24_am.png",
     alt: "Structural steel beam installation"
   },
   {
     icon: Home,
     title: "Garden Studios",
     description: "Beautiful garden studio constructions for home offices, art studios, gyms, or guest accommodations.",
-    img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_11_48_am.png",
     alt: "Modern garden studio office space"
   },
   {
