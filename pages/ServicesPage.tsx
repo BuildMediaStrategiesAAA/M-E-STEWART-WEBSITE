@@ -7,42 +7,42 @@ const services = [
     icon: Home,
     title: "General Building",
     description: "Comprehensive building services for all types of construction projects with expert craftsmanship and attention to detail.",
-    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/remake_this_image_202512091155_(1).jpeg",
     alt: "Professional construction worker on building site"
   },
   {
     icon: Hammer,
     title: "Fire and Flood Renovation",
     description: "Specialist restoration services to repair and restore properties damaged by fire or flood, returning them to their former glory.",
-    img: "/assets/ricardo-gomez-angel-lxfvpmrtine-unsplash.jpg",
+    img: "/assets/remake_this_image_202512091157_(1).jpeg",
     alt: "Fire damaged house requiring restoration"
   },
   {
     icon: Building,
     title: "Loft Conversions",
     description: "Unlock the potential of your attic. Creating master suites, offices, and additional bedrooms with expert design.",
-    img: "/assets/stephen-munley-vdahehdmfl0-unsplash.jpg",
+    img: "/assets/remake_this_image_202512091157.jpeg",
     alt: "Converted loft space with wooden beams and bedroom"
   },
   {
     icon: HardHat,
     title: "Project Management",
     description: "Complete project oversight from planning to completion, ensuring your build stays on time, on budget, and to specification.",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/remake_this_image_202512091155.jpeg",
     alt: "Construction project planning and management"
   },
   {
     icon: Home,
     title: "Sustainable Construction",
     description: "Eco-friendly building solutions using sustainable materials and energy-efficient designs for a greener future.",
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/remake_this_image_202512091153_(1).jpeg",
     alt: "Eco-friendly sustainable building design"
   },
   {
     icon: Building,
     title: "Workshop Design / Construction",
     description: "Custom-built workshops tailored to your specific needs, from hobbyist spaces to professional working environments.",
-    img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/remake_this_image_202512091153.jpeg",
     alt: "Custom workshop interior construction"
   },
   {
