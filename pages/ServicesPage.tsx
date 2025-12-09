@@ -133,7 +133,7 @@ const services = [
     icon: Clock,
     title: "Emergency Builder Service",
     description: "24/7 emergency building services for urgent repairs, storm damage, and structural issues requiring immediate attention.",
-    img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/chatgpt_image_dec_9,_2025,_10_04_46_am.png",
     alt: "Emergency building repair service"
   }
 ];
