@@ -119,21 +119,21 @@ const services = [
     icon: HardHat,
     title: "Structural Steels",
     description: "Installation of structural steel beams and supports for load-bearing alterations, extensions, and new builds.",
-    img: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?q=80&w=1200&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop",
     alt: "Structural steel beam installation"
   },
   {
     icon: Home,
     title: "Garden Studios",
     description: "Beautiful garden studio constructions for home offices, art studios, gyms, or guest accommodations.",
-    img: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=1200&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
     alt: "Modern garden studio office space"
   },
   {
     icon: Clock,
     title: "Emergency Builder Service",
     description: "24/7 emergency building services for urgent repairs, storm damage, and structural issues requiring immediate attention.",
-    img: "https://images.unsplash.com/photo-1577801622187-9a1076d049da?q=80&w=1200&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
     alt: "Emergency building repair service"
   }
 ];
