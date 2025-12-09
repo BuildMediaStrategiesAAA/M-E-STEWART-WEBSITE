@@ -14,14 +14,14 @@ const services = [
     icon: Hammer,
     title: "Fire and Flood Renovation",
     description: "Specialist restoration services to repair and restore properties damaged by fire or flood, returning them to their former glory.",
-    img: "https://images.unsplash.com/photo-1603808033587-b5c7c7007d23?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/ricardo-gomez-angel-lxfvpmrtine-unsplash.jpg",
     alt: "Fire damaged house requiring restoration"
   },
   {
     icon: Building,
     title: "Loft Conversions",
     description: "Unlock the potential of your attic. Creating master suites, offices, and additional bedrooms with expert design.",
-    img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop",
+    img: "/assets/stephen-munley-vdahehdmfl0-unsplash.jpg",
     alt: "Converted loft space with wooden beams and bedroom"
   },
   {
